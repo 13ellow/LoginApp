@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+<!-- タイトル -->
+{% block title %}
+Administrator Page 
+{% endblock %} 
+
+<!-- ヘッドライン -->
+{% block head %}
+{% endblock %}
+
+<!-- コンテンツ -->
+{% block content %}
+<h2 class="welcome">Welcome back, Administrator</h2>
+
+<div class="register">
+    <h2>register new User</h2>
+    <form method="POST",action="/administrator">
+        <p><input type="text" id="box_username" name="username" placeholder="username" maxlength="10"/></p>
+        <p><input type="password" id="box_pass" name="pass" placeholder="password" maxlength="10"/></p>
+        <p><input type="submit"  id="add_user" value="Add this User"></p>
+    </form>
+</div>
+
+<div class="delete">
+    <h2>delete registered User</h2>
+    <form action="/administrator/delete_all">
+        <p><input type="submit" id="delete_all" value="Delete all registered Users"></p>
+    </form>
+</div>
+
+<form action="/logout">
+    <p><input type="submit" id="box_logout" class="admin" value="Logout"/></p>
+</form>
+{% endblock %}

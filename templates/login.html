@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+<!-- タイトル -->
+{% block title %}
+Result Page 
+{% endblock %} 
+
+<!-- ヘッドライン -->
+{% block head %}
+{% endblock %}
+
+<!-- コンテンツ -->
+{% block content %}
+<div class="result_success">
+    <h2>User Page</h2>
+
+    <form method="POST",action="/login">
+        <p><input type="text" id="box_username" name="username" placeholder="username" maxlength="10"/></p>
+        <p><input type="password" id="box_pass" name="pass" placeholder="password" maxlength="10"/></p>
+        <p><input type="submit"  id="change_info" value="Change username/password"></p>
+    </form>
+
+    <a1>-------------------------------------</a1>
+    
+    <form action="/delete">
+        <p><input type="submit" id="delete_user" value="Delete this User"></p>
+    </form>
+
+</div>
+
+<form action="/logout">
+    <input type="submit" id="box_logout" class="success" value="Logout"/>
+</form>
+{% endblock %}

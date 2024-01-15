@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+<!-- タイトル -->
+{% block title %}
+Top Page 
+{% endblock %} 
+
+<!--ヘッドライン-->
+{% block head %}
+{% endblock %}
+
+<!--コンテンツ-->
+{% block content %}
+<div class = "login-box">
+    <h2>Login<br></h2>
+    <p1>Enter username & password</p1>
+    <form method="POST" action="/">
+        <p><input type="text" id="box_username" name="username" placeholder="username" maxlength="10"/></p>
+        <p><input type="password" id="box_pass" name="pass" placeholder="password" maxlength="10"/></p>
+        <p><input type="submit" id="box_login" value="Login"/></p>
+    </form>
+</div>
+{% endblock %}
