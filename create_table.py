@@ -20,7 +20,7 @@ def create():
     users = [
         (0,"admin","qwerty"),
         (1,"cguf0082","Doshisha"),
-        (2,"ISDL","project443")
+        (2,"ISDL","test")
     ]
     cur.executemany("INSERT INTO users values(?,?,?)",users)
     conn.commit()   # データベースへの反映
